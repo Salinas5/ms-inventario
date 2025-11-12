@@ -28,4 +28,4 @@ def actualizar_inventario():
 
 if _name_ == '__main__':
     # Corremos en el puerto 5003
-    app.run(host= "0.0.0.0", port=5003, debug=True)
+    app.run(host= "0.0.0.0", port=5003,debug=True)
