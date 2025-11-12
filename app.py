@@ -3,7 +3,7 @@ import random
 import time 
 import logging
 
-app = flask.Flask(_name_)
+app = flask.Flask(__name__)
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -26,6 +26,6 @@ def actualizar_inventario():
         logging.warning("Fallo al actualizar inventario: SIN STOCK (Status 409)")
         return flask.jsonify({"mensaje": "Fallo: Sin stock disponible"}), 409
 
-if _name_ == '__main__':
+if __name__ == '__main__':
     # Corremos en el puerto 5003
-    app.run(host= "0.0.0.0", port=5003,debug=True)
+    app.run(host="0.0.0.0", port=5003,debug=True)
